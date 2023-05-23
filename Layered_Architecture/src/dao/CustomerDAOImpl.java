@@ -30,7 +30,7 @@ public class CustomerDAOImpl {
      }
      return allCustomers;
     }
-
+ //save customer
     public boolean saveCustomer(CustomerDTO dto) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("INSERT INTO Customer (id,name, address) VALUES (?,?,?)");
